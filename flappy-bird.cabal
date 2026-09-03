@@ -3,6 +3,7 @@ name:               flappy-bird
 version:            0.1.0.0
 -- synopsis:
 -- description:
+homepage:           https://github.com/abdivasiyev/flappy-bird
 license:            Apache-2.0
 license-file:       LICENSE
 author:             Asliddin Abdivasiyev
@@ -15,6 +16,10 @@ extra-doc-files:    CHANGELOG.md
 
 common warnings
     ghc-options: -Wall
+    default-extensions:
+        DataKinds
+        OverloadedRecordDot
+        OverloadedStrings
 
 executable flappy-bird
     import:           warnings
@@ -22,5 +27,8 @@ executable flappy-bird
     -- other-modules:
     -- other-extensions:
     build-depends:    base ^>=4.21.0.0
+                    , text
+                    , sdl2
+                    , sdl2-image
     hs-source-dirs:   app
     default-language: GHC2024

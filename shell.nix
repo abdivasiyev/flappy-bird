@@ -32,6 +32,9 @@ pkgs.stdenv.mkDerivation {
     pre-commit-check.enabledPackages
     pkgs.git
     pkgs.pkg-config
+    pkgs.SDL2
+    pkgs.SDL2_image
+    pkgs.libtiff
   ];
   # Things to run before entering devShell
   shellHook = ''
